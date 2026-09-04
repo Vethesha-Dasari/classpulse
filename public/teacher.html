@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Teacher - ClassPulse</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>ClassPulse</h1>
+
+        <h2>Create Session</h2>
+
+        <div class="form-card">
+
+            <input
+                type="text"
+                id="className"
+                placeholder="Enter class name"
+            >
+
+            <input
+                type="text"
+                id="topic"
+                placeholder="Enter topic"
+            >
+
+            <button onclick="createSession()">
+                Create Session
+            </button>
+
+        </div>
+
+
+        <!-- Session information appears here -->
+
+        <div id="sessionInfo"></div>
+
+
+        <!-- ADD THE END SESSION BUTTON HERE -->
+
+        <button
+            id="endSessionButton"
+            onclick="endSession()"
+            style="display: none;"
+        >
+            End Session
+        </button>
+
+
+        <!-- Questions section -->
+
+        <div
+            id="questionsSection"
+            style="display: none;"
+        >
+
+            <h2>Student Questions</h2>
+
+            <p id="questionCount">
+                0 questions
+            </p>
+
+            <div id="questionList"></div>
+
+        </div>
+
+    </div>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="js/teacher.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Student - ClassPulse</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>ClassPulse</h1>
+
+        <h2>Join Session</h2>
+
+        <div class="form-card">
+
+            <input
+                type="text"
+                id="studentName"
+                placeholder="Enter your name"
+            >
+
+            <input
+                type="text"
+                id="sessionCode"
+                placeholder="Enter session code"
+            >
+
+            <button onclick="joinSession()">
+                Join Session
+            </button>
+
+        </div>
+
+        <div id="sessionInfo"></div>
+
+    </div>
+    <div id="questionSection" style="display: none;">
+
+    <div class="form-card">
+
+        <h2>Ask a Question</h2>
+
+        <textarea
+            id="questionText"
+            placeholder="Type your question here..."
+            rows="5"
+        ></textarea>
+
+        <button onclick="submitQuestion()">
+            Submit Question
+        </button>
+
+    </div>
+
+    <div id="questionMessage"></div>
+    <div class="form-card">
+    <h2>My Questions</h2>
+    <div id="myQuestions">
+        <p>No questions submitted yet.</p>
+    </div>
+</div>
+
+</div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/student.js"></script>
+
+</body>
+
+</html>

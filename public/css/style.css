@@ -1,0 +1,299 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 80px auto;
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.container > p {
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.role-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.role-card {
+    width: 280px;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #222;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.2s;
+}
+
+.role-card:hover {
+    transform: translateY(-5px);
+}
+
+.role-card h2 {
+    margin-bottom: 10px;
+}
+
+.role-card p {
+    color: #666;
+}
+.form-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: 30px auto;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.form-card input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.form-card button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #333;
+    color: white;
+    font-size: 16px;
+}
+
+.form-card button:hover {
+    opacity: 0.9;
+}
+
+/* Teacher question panel */
+
+.questions-panel {
+    position: fixed;
+
+    top: 30px;
+    right: 30px;
+
+    width: 380px;
+
+    height: calc(100vh - 60px);
+
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+
+    overflow-y: auto;
+
+    z-index: 10;
+}
+
+
+/* Header */
+
+.questions-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 18px;
+
+    position: sticky;
+
+    top: 0;
+
+    background: white;
+
+    padding-bottom: 12px;
+
+    z-index: 2;
+}
+
+
+.questions-header h2 {
+
+    margin: 0;
+
+}
+
+
+#questionCount {
+
+    font-size: 13px;
+
+    color: #666;
+}
+
+
+/* Individual groups */
+
+.question-group {
+
+    background: #f7f8fa;
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #e5e7eb;
+}
+
+
+/* Group heading */
+
+.group-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 12px;
+}
+
+
+.group-number {
+
+    font-weight: bold;
+
+    font-size: 15px;
+}
+
+
+.group-count {
+
+    font-size: 12px;
+
+    color: #666;
+}
+
+
+/* Questions */
+
+.question-item {
+
+    background: white;
+
+    border-radius: 9px;
+
+    padding: 11px;
+
+    margin-top: 8px;
+
+    border: 1px solid #e5e7eb;
+}
+
+
+.student-name {
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin-bottom: 5px;
+
+    color: #555;
+}
+
+
+.question-text {
+
+    font-size: 14px;
+
+    line-height: 1.4;
+
+}
+
+
+/* Empty state */
+
+.no-questions {
+
+    text-align: center;
+
+    color: #777;
+
+    padding: 30px 10px;
+}
+
+
+/* Scrollbar */
+
+.questions-panel::-webkit-scrollbar {
+
+    width: 7px;
+}
+
+
+.questions-panel::-webkit-scrollbar-thumb {
+
+    background: #bbb;
+
+    border-radius: 10px;
+}
+
+
+.questions-panel::-webkit-scrollbar-track {
+
+    background: transparent;
+}
+
+.group-actions {
+    margin-top: 15px;
+}
+
+.group-actions textarea {
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+    margin-bottom: 8px;
+}
+
+.group-actions button {
+    margin-right: 6px;
+    margin-top: 5px;
+}
+
+.group-answer {
+    margin-top: 15px;
+    padding: 12px;
+    background: #eef7ee;
+    border-radius: 8px;
+}
+
+.group-answer p {
+    margin: 6px 0 0;
+}
