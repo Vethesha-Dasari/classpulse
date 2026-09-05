@@ -128,9 +128,8 @@ app.post("/api/sessions", async (req, res) => {
             });
 
         await session.save();
-
-        const joinUrl =
-    `http://192.168.1.41:5000/student.html?session=${sessionCode}`;
+      const joinUrl =
+    `${req.protocol}://${req.get("host")}/student.html?session=${sessionCode}`;
 
         const qrCode =
             await QRCode.toDataURL(joinUrl);
